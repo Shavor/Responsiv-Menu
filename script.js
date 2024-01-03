@@ -32,8 +32,25 @@ const hideMenu = () => {
   close.style.transform = 'translateY(-20rem)';
   menuWrapper.style.transform = 'translateX(-200%)';
   menu.style.transform = 'translateX(200%)';
+  sunMenuThree.style.transform = 'translateX(-100%)';
+
 }
 
 humburger.addEventListener('click', showMenu);
 close.addEventListener('click', hideMenu);
 menuWrapper.addEventListener('click', hideMenu);
+
+//Submenu Section
+const thirdLink = document.querySelector('.third-link'),
+      back = document.querySelector('.back-to-menu'),
+      sunMenuThree = document.querySelector('.sunmenu-three');
+
+thirdLink.addEventListener('click', ()=> {
+  menu.style.transform = 'translateX(-100%)';
+  sunMenuThree.style.transform = 'translateX(0)';
+});
+
+back.addEventListener('click', ()=> {
+  menu.style.transform = 'translateX(0)';
+  sunMenuThree.style.transform = 'translateX(-100%)';
+})
